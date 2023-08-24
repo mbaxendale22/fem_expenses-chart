@@ -9,13 +9,13 @@
 }
 
 .bar-container .bar {
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     background-color: var(--soft-red);
     width: 100%;
     cursor: pointer;
 }
 .bar-container .daily-total {
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     background-color: var(--dark-brown);
     width: 115%;
     color: white;

@@ -21,7 +21,7 @@ function App() {
                 <figure>
                     {data.map((singleDay) => (
                         <Bar
-                            barHeight={singleDay.amount * 2}
+                            barHeight={singleDay.amount * 2.5}
                             day={singleDay.day}
                             dailyTotal={singleDay.amount.toString()}
                         />
