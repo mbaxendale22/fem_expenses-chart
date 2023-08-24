@@ -1,0 +1,18 @@
+header {
+    background-color: var(--soft-red);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-left p {
+    margin: 0;
+}
