@@ -2,45 +2,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98vh;
+    height: 97vh;
 }
 
 .wrapper {
     width: 550px;
-    border: 1px solid green;
 }
 
 main {
-    width: calc(100% - 4rem);
-    margin: 0 auto;
+    width: calc(100%);
+    margin: 2rem auto;
+    color: var(--dark-brown);
+    /* text-align: center; */
+    background-color: #fffbf6;
+    border-radius: 1rem;
+    padding: 0 2rem;
 }
 
-main {
-    color: black;
+main h2 {
+    padding-top: 1rem;
 }
 
 figure {
     padding: 0;
     margin: 0;
     display: flex;
-    border: 1px solid black;
     justify-content: space-evenly;
     height: 200px;
+    margin-top: 2rem;
 }
 
-/********** TOTALS SECTION **********/
-
-.totals-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid var(--medium-brown);
-    margin-top: 4rem;
-    padding: 2rem 0;
-}
-.totals-section p,
-h1,
-h2 {
-    padding: 0;
-    margin: 0;
+@media (max-width: 500px) {
+    main {
+        width: calc(100%);
+    }
+    main h2 {
+        font-size: 1.5rem;
+    }
 }

@@ -1,34 +1,34 @@
 import './App.css'
 import { Header } from './header'
 import { Bar } from './bar'
+import { data } from './data'
+import { Totals } from './totals'
+const MY_BALANCE = 921.48
 
 function App() {
+    const totalBalance = data.reduce((acc, value) => {
+        return acc + value.amount
+    }, 0)
+
+    console.log(totalBalance)
+
     return (
         <div className="wrapper">
-            <Header totalBalance={921.48} />
+            <Header totalBalance={MY_BALANCE} />
             <main>
                 <h2>Spending - Last 7 days</h2>
 
                 <figure>
-                    <Bar barHeight="40" day="mon" />
-                    <Bar barHeight="70" day="tue" />
-                    <Bar barHeight="30" day="wed" />
-                    <Bar barHeight="50" day="thu" />
-                    <Bar barHeight="50" day="fri" />
-                    <Bar barHeight="50" day="sat" />
-                    <Bar barHeight="50" day="sun" />
+                    {data.map((singleDay) => (
+                        <Bar
+                            barHeight={singleDay.amount * 2}
+                            day={singleDay.day}
+                            dailyTotal={singleDay.amount.toString()}
+                        />
+                    ))}
                 </figure>
 
-                <section className="totals-section">
-                    <div className="left-side">
-                        <p className="color-brown">Total this month</p>
-                        <h1 className="color-dark-brown">$478.33</h1>
-                    </div>
-                    <div className="right-side">
-                        <p>+2.4%</p>
-                        <p className="color-brown">from last month</p>
-                    </div>
-                </section>
+                <Totals />
             </main>
         </div>
     )

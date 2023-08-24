@@ -2,12 +2,13 @@ import './bar.css'
 import { useState } from 'react'
 
 type Props = {
-    barHeight: string
+    barHeight: number
     day: string
+    dailyTotal: string
 }
 
 export const Bar = (props: Props) => {
-    const { barHeight, day } = props
+    const { barHeight, day, dailyTotal } = props
     const [showTotal, setShowTotal] = useState(false)
 
     const handleShowTotal = () => {
@@ -26,7 +27,7 @@ export const Bar = (props: Props) => {
     return (
         <div className="bar-container">
             <div className="daily-total" style={dailyTotalStyle}>
-                {32.5}
+                {`$${dailyTotal}`}
             </div>
             <div
                 className="bar"

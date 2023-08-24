@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: flex-end;
     width: 50px;
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 .bar-container .bar {
@@ -17,7 +17,7 @@
 .bar-container .daily-total {
     border-radius: 0.5rem;
     background-color: var(--dark-brown);
-    width: 100%;
+    width: 115%;
     color: white;
     text-align: center;
     font-weight: 700;
@@ -25,4 +25,10 @@
 
 .bar-container p {
     margin: 0;
+}
+
+@media (max-width: 500px) {
+    .bar-container {
+        width: 40px;
+    }
 }
