@@ -1,0 +1,28 @@
+.bar-container {
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px;
+    gap: 0.5rem;
+}
+
+.bar-container .bar {
+    border-radius: 0.5rem;
+    background-color: var(--soft-red);
+    width: 100%;
+    cursor: pointer;
+}
+.bar-container .daily-total {
+    border-radius: 0.5rem;
+    background-color: var(--dark-brown);
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+.bar-container p {
+    margin: 0;
+}

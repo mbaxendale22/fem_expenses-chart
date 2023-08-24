@@ -1,3 +1,4 @@
+import './bar.css'
 import { useState } from 'react'
 
 type Props = {
@@ -13,17 +14,23 @@ export const Bar = (props: Props) => {
         setShowTotal(!showTotal)
     }
 
+    const barStyle = {
+        height: `${barHeight}px`,
+        backgroundColor: showTotal ? 'hsl(186, 34%, 60%)' : 'hsl(10, 79%, 65%)',
+    }
+
+    const dailyTotalStyle = {
+        display: showTotal ? 'block' : 'none',
+    }
+
     return (
         <div className="bar-container">
-            <div
-                className="daily-total"
-                style={showTotal ? { display: 'block' } : { display: 'none' }}
-            >
+            <div className="daily-total" style={dailyTotalStyle}>
                 {32.5}
             </div>
             <div
                 className="bar"
-                style={{ height: `${barHeight}px` }}
+                style={barStyle}
                 onMouseEnter={handleShowTotal}
                 onMouseLeave={handleShowTotal}
             ></div>
